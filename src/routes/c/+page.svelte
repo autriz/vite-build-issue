@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { getBucketFiles } from "$lib/files";
+	import { gifAndWebm } from "$lib/files";
 
-	const files = getBucketFiles("bucket3");
-	const paths = Object.keys(files ?? {});
+	const paths = Object.keys(gifAndWebm ?? {});
 </script>
 
 <section>
 	<h1>Route /c</h1>
-	<p>{paths.length} files</p>
+	<p>{paths.length} gifs or webms</p>
 </section>

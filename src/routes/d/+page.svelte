@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { getBucketFiles } from "$lib/files";
+	import { jpgAndPng } from "$lib/files";
 
-	const files = getBucketFiles("bucket4");
-	const paths = Object.keys(files ?? {});
+	const paths = Object.keys(jpgAndPng ?? {});
 </script>
 
 <section>
 	<h1>Route /d</h1>
-	<p>{paths.length} files</p>
+	<p>{paths.length} pngs or jpegs</p>
 </section>

@@ -10,6 +10,18 @@ export const rawOtherFiles = import.meta.glob("$data/other/**/*", {
 	import: "default",
 });
 
+export const jpgAndPng = import.meta.glob("$data/images/**/*.{.png,.jpg}", {
+	eager: true,
+	query: "?url",
+	import: "default",
+});
+
+export const gifAndWebm = import.meta.glob("$data/images/**/*{.gif,.webm}", {
+	eager: true,
+	query: "?url",
+	import: "default",
+});
+
 export const bucketFiles = Object.entries(rawBucketFiles).map(([key, data]) => {
 	const newKey = key.replace("/src/data/", "");
 
