@@ -1,4 +1,10 @@
-export const rawBucketFiles = import.meta.glob("$data/**/*", {
+export const rawBucketFiles = import.meta.glob("$data/buckets/**/*", {
+	eager: true,
+	query: "?url",
+	import: "default",
+});
+
+export const rawOtherFiles = import.meta.glob("$data/other/**/*", {
 	eager: true,
 	query: "?url",
 	import: "default",
