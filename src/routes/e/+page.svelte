@@ -1,11 +1,5 @@
 <script lang="ts">
-	const files = import.meta.glob('$data/files/**/*', {
-		eager: true,
-		query: '?url',
-		import: 'default'
-	}) as Record<string, string>;
-
-	const paths = Object.keys(files);
+	import { paths } from "$lib/files";
 </script>
 
 <section>
