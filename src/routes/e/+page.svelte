@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { paths } from "$lib/files";
+	import { getBucketFiles } from "$lib/files";
+
+	const files = getBucketFiles("bucket5");
+	const paths = Object.keys(files ?? {});
 </script>
 
 <section>
